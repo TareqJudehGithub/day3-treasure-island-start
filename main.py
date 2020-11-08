@@ -22,5 +22,32 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
+print("")
 
-#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+cross = input("You're standing at a cross road, which direction should you go?\n 'left' or 'right'?\n ").lower()
+print("")
+
+if cross == "left":
+  lake = input('''You've come into a lake. There's an island in the middle of the lake.
+    Type "wait" to wait for boat. Or type "swim to swim across"? 
+    ''' ).lower()
+
+  print("")
+  if lake == "wait":
+    # continue
+    doors = input('''You made it to the island unharmed.
+    There is a house with 3 doors. One red, One yellow, and One blue.
+    Which door do u choose? (red, yellow, or blue)?
+    ''').lower()
+
+    print("")
+    if doors == "red":
+      print("You've stepped inside a room full of snakes! Game Over!")
+    elif doors == "yellow":
+      print("You found the treasure! Congratulations!")
+    elif doors == "blue":
+      print("You've open a door and the room was empty. Game Over!")
+  else: 
+    print("You got attacked by an angry trout. Game Over!")
+else:
+  print("You fell into a hole. Game Over!")
